@@ -1,0 +1,15 @@
+php artisan make:controller halamanController --resource 
+bertujuan untuk menambah fungsi lain seperti crud
+
+/////////
+Route::prefix('dashboard')->group(
+    function (){
+        Route::get('/dashboard/halaman', [halamanController::class, 'index']);
+    }
+);
+berfungsi untuk memudahkan dalam route yang akan kita akses
+////////////
+
+
+//menambahkan kolom bantuan untuk format waktu di models riwayat
+// mengubah time zone di config/app.php
